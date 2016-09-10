@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 echo "*** Deploying to DigitalOcean - assuming that SSH keys for CodeShip are added to target host ***"
 echo""
 

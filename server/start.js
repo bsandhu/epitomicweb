@@ -7,12 +7,13 @@ var assert = require('assert');
 
 
 function setupStaticRoutes() {
-    server.get(/\/app\/.*/, serveStaticWith304({
-        directory: 'site',
+    server.get(/\/myclaimshelper\/?.*/, restify.serveStatic({
+        'directory': './server/site',
+        'default': 'index.html',
         maxAge: 60 * 60 * 24
     }));
-    server.get('/.*/ ', serveStaticWith304({
-        'directory': 'site',
+    server.get('/.*/', restify.serveStatic({
+        'directory': 'server/site/epitomic.systems',
         'default': 'index.html',
         maxAge: 60 * 60 * 24
     }));
