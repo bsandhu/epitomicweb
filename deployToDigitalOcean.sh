@@ -8,6 +8,9 @@ scp -rC site root@45.55.192.142:~/epitomicweb;
 
 echo""
 echo "*** Done ***"
-echo "Bouncing node"
+echo""
+echo "*** Killing Node ***"
 ssh root@45.55.192.142 kill $(ps -ef | grep '[s]erver/start.js' | awk '{print $2}')
+echo""
+echo "*** Starting Node ***"
 ssh root@45.55.192.142 'cd ~/epitomicweb;npm install;nohup nodejs ./server/start.js &'
