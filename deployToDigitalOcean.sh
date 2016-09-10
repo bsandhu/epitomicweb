@@ -7,7 +7,6 @@ ssh root@45.55.192.142 'rm -rf ~/epitomicweb'
 ssh root@45.55.192.142 'mkdir ~/epitomicweb'
 scp * root@45.55.192.142:~/epitomicweb;
 scp -rC server root@45.55.192.142:~/epitomicweb;
-scp -rC site root@45.55.192.142:~/epitomicweb;
 
 echo""
 echo "*** Done ***"
